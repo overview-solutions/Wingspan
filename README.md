@@ -2,7 +2,7 @@
 A LiDAR data environment built for Power Grid modeling and analysis
 
 ### Current Progress
-![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGY4Y2Q2ZmY0YTYxZTg4ZmJlYjMyMTk0NTk3YTRmNWNlMzNhZjY3MSZjdD1n/y9y0VqaduXMjq8QSPQ/giphy-downsized-large.gif)
+![](lidar001.gif)
 
 ## Instructions
 The [InitSystem.cs](https://github.com/overview-solutions/Wingspan/blob/main/Wingspan/Assets/Scripts/Systems/InitSystem.cs) script is where the LiDAR point cloud is called as a TXT file (from the [StreamingAssets](https://github.com/overview-solutions/Wingspan/tree/main/Wingspan/Assets/StreamingAssets) folder), so this will need to be modified for any new point clouds, including the way each point cloud is centered in the scene.<br>
