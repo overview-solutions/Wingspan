@@ -16,24 +16,7 @@ Unity's [ECS](https://unity.com/ecs) (Entity Component System) that is part of t
 
 ## Rendering Optimization Notes
 Within the Unity GameEngine there are several pipelines and workflows designed to optimize various graphical effects and behaviors. Some are designed to reduce the amount of data that is attached directly to each GameObject, while others find ways to reduce the graphical complexity of each GameObject in the scene. Below is the testing that was done to determine the initial workflow for rendering point clouds.
-![](/Notes/RenderProfileCompFinal.png)
+![](/Notes/RenderProfileCompFinal02.png)
 
 ### 02/25/2023 - Testing Notes
 Based on this example, Sprites are useful for regular GameObjet rendering, as well as Particle System rendering, although Cubes seem to outperform Sprites when using the ECS.
-
-**Loading Time (in Editor)**
-
-Vanilla
-- Sprites:  00:40
-- Planes:   00:50   00:45
-- Cubes:    00:52   00:45
-
-Particle
-- Sprites   00:15   00:56
-- Planes    01:02   00:52
-- Cubes     00:50   00:44
-
-ECS
-- Sprite    00:42   01:08
-- Plane     00:16   00:12
-- Cube      00:08
