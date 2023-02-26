@@ -19,11 +19,9 @@ Within the Unity GameEngine there are several pipelines and workflows designed t
 ![](/Notes/RenderProfileCompFinal.png)
 
 ### 02/25/2023 - Testing Notes
-Particle System v ECS
+Based on this example, Sprites are useful for regular GameObjet rendering, as well as Particle System rendering, although Cubes seem to outperform Sprites when using the ECS.
 
-Vanilla
-Particle
-ECS
+**Loading Time (in Editor)**
 
 Vanilla
 - Sprites:  00:40
