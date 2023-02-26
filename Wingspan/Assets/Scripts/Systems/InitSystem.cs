@@ -21,14 +21,14 @@ namespace StateMachineValue
         public void OnDestroy(ref SystemState state)
         {
         }
-
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             state.Enabled = false;
-            string filePath = Application.streamingAssetsPath + "/lidar_data.txt";
-            string[] lines = File.ReadAllLines(filePath);
             var config = SystemAPI.GetSingleton<Config>();
+            string filePath = "C:/Users/adam/Documents/GitHub/Wingspan/Wingspan/Builds/Wingspan_Data/StreamingAssets/lidar_data.txt";
+            //string filePath = Application.streamingAssetsPath + "/lidar_data.txt";
+            string[] lines = File.ReadAllLines(filePath);
             int pointCount = lines.Length;
 
             var cubes = state.EntityManager.Instantiate(config.Prefab,
@@ -37,7 +37,7 @@ namespace StateMachineValue
 
 
             Vector3[] positions = new Vector3[pointCount];
-            for (int i = 0; i < lines.Length; i++)
+            for (int i = 0; i < pointCount; i++)
             {
                 var trans = new LocalTransform { Scale = 1 };
                 string[] values = lines[i].Split(',');
@@ -45,7 +45,7 @@ namespace StateMachineValue
                 trans.Position.y = float.Parse(values[2])/10-70;
                 trans.Position.z = (float.Parse(values[1]) / 10) - 71000;
                 SystemAPI.SetComponent(cubes[i], trans);
-                Debug.Log(trans.Position);
+                //Debug.Log(trans.Position);
             }
         }
     }
