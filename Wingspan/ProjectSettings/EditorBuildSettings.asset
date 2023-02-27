@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PointCloudScene.unity
     guid: 9e64aa8eb086144408cc5fc2c539c07a
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a502b6eb51af2634da7c03ada27c31c5,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c48326f898083ac428479e0d282b4a30,
+      type: 2}
