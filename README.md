@@ -24,3 +24,14 @@ Within the Unity GameEngine there are several pipelines and workflows designed t
 
 ### 02/25/2023 - Testing Notes
 Based on this example, Sprites are useful for regular GameObjet rendering, as well as Particle System rendering, although Cubes seem to outperform Sprites when using the ECS.
+
+---
+### Errors
+
+One of the primary issues is that when using BurstCompiler, you can't use any Managed Methods, meaning things like script that reads a file, or even that calls to a GameObject in order to get values from it, cannot be compiled. They might work in the Editor, but will fail when you try to Build.<br>
+
+**StringReader**
+![](/Notes/Error_StringReading.png)
+I've tried several workarounds, including reading the file in a regular MonoBehavior file, and then scheduling an `IJob` that passes the `ISharedDataComponent` to the `ISystem`. So far no luck. I also tried adding another Method to the Burst that could be called from MonoBehavior (see below), but again no luck<br>
+![](/Notes/Error_Pass2Burst.png)
+

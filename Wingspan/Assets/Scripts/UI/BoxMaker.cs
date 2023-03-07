@@ -19,12 +19,13 @@ public class BoxMaker : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+
+        if (OVRInput.Get(OVRInput.RawAxis1D.RHandTrigger) > 0.5f || Input.GetKey("w"))
         {
             startPosition = transform.position;
-            isCreatingCube = true;
+            isCreatingCube = true;        
         }
-        else if (Input.GetButtonUp("Fire1"))
+        else if (OVRInput.Get(OVRInput.RawAxis1D.RHandTrigger) < 0.5f && OVRInput.Get(OVRInput.RawAxis1D.RHandTrigger) >0.1f)
         {
             endPosition = transform.position;
             isCreatingCube = false;
@@ -42,7 +43,9 @@ public class BoxMaker : MonoBehaviour
     {
         float cubeSize = Vector3.Distance(startPosition, endPosition);
         currentCube = Instantiate(cubePrefab, startPosition, Quaternion.identity);
+        currentCube.name = DateTime.Now.ToString();
         currentCube.transform.localScale = Vector3.one * cubeSize;
+        currentCube.transform.position = startPosition;
     }
 
     void UpdateCubeSize()
@@ -50,5 +53,6 @@ public class BoxMaker : MonoBehaviour
         float cubeSize = Vector3.Distance(startPosition, endPosition);
         cubeSize = Mathf.Clamp(cubeSize, minScale, maxScale);
         currentCube.transform.localScale = Vector3.one * cubeSize;
+        currentCube.transform.position = endPosition;
     }
 }

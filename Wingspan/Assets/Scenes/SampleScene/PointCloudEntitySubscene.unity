@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 3618217295078580252, guid: ffac8c841f7de224d814963377d5cc5c, type: 3}
   Size: 500
-  Radius: 40
+  Radius: 10
 --- !u!4 &1914822610
 Transform:
   m_ObjectHideFlags: 0
