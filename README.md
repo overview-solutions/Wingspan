@@ -1,5 +1,5 @@
 # Wingspan
-A LiDAR data environment built for Power Grid modeling and analysis
+A LiDAR data environment built for labeling and classifying point clouds
 
 ### Current Progress
 ![](/Notes/lidar001.gif)
