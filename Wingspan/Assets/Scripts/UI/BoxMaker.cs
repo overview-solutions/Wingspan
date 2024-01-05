@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using OVRTouchSample;
+//using OVRTouchSample;
 using System;
 
 public class BoxMaker : MonoBehaviour
@@ -19,7 +19,7 @@ public class BoxMaker : MonoBehaviour
 
     void Update()
     {
-
+        /*
         if (OVRInput.Get(OVRInput.RawAxis1D.RHandTrigger) > 0.5f || Input.GetKey("w"))
         {
             startPosition = transform.position;
@@ -37,6 +37,7 @@ public class BoxMaker : MonoBehaviour
             endPosition = transform.position;
             UpdateCubeSize();
         }
+        */
     }
 
     void CreateCube()

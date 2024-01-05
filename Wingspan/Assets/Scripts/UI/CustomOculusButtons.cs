@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using OVRTouchSample;
+//using OVRTouchSample;
 using System;
-using Oculus.Platform.Models;
+//using Oculus.Platform.Models;
 
 public class CustomOculusButtons : MonoBehaviour
 {
@@ -20,6 +20,7 @@ public class CustomOculusButtons : MonoBehaviour
             //sundial.now += 512 / (int)mainSlider.value;
             //GetComponent<AudioSource>().Play();
         //}
+        /*
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstick) || Input.GetKeyDown("r"))
         {
             print("Right Thumb");
@@ -32,5 +33,6 @@ public class CustomOculusButtons : MonoBehaviour
             player.transform.localScale += player.transform.localScale / 4;
         if (OVRInput.GetDown(OVRInput.RawButton.A))
             player.transform.localScale -= player.transform.localScale/5;
+        */
     }
 }
